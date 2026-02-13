@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Inventario {
@@ -12,7 +11,7 @@ public class Inventario {
         this.objetos = objetos;
     }
 
-    public void añadirObjeto(Objeto objeto) {
+    public void anadirObjeto(Objeto objeto) {
         if (espacioOcupado >= espacioMaximo) {
             System.out.println("No se puede añadir nuevo objeto! Inventario esta lleno!");
         }
@@ -32,8 +31,8 @@ public class Inventario {
     }
     public void eliminarObjeto(int posicion) {
         if (posicion >= 0 && posicion < objetos.size()) {
-            objetos.remove(posicion);
             System.out.println("Objeto eliminado: " + objetos.get(posicion).getNombre());
+            objetos.remove(posicion);
             espacioOcupado--;
         }
     }
@@ -52,5 +51,13 @@ public class Inventario {
 
     public void setEspacioOcupado(int espacioOcupado) {
         this.espacioOcupado = espacioOcupado;
+    }
+
+    public List<Objeto> getObjetos() {
+        return objetos;
+    }
+
+    public void setObjetos(List<Objeto> objetos) {
+        this.objetos = objetos;
     }
 }

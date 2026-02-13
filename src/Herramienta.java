@@ -40,6 +40,7 @@ public class Herramienta extends Objeto{
     @Override
     public void mostrar() {
         super.mostrar();
+
         System.out.println("Porcentaje del uso: " + porcentajeDeUso);
         System.out.println("Que obtiene: " + obtenido);
     }
