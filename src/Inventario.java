@@ -14,6 +14,7 @@ public class Inventario {
     public void anadirObjeto(Objeto objeto) {
         if (espacioOcupado >= espacioMaximo) {
             System.out.println("No se puede añadir nuevo objeto! Inventario esta lleno!");
+            return;
         }
 
         objetos.add(objeto);
