@@ -97,7 +97,7 @@ public class MainInventario {
                     }
                     break;
                 case 5:
-                    GuardarFichero.guardar("objetos.txt", objetos);
+                    GuardarFichero.guardar("objetos.txt", inventario.getObjetos());
                     break;
                 case 0:
                     System.out.println("Saliendo....");
