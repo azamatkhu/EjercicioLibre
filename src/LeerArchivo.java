@@ -35,7 +35,8 @@ public class LeerArchivo {
             System.out.println("Los objetos se han cargado! ");
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error, archivo no encontrado.");
+            return listaObjetos;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

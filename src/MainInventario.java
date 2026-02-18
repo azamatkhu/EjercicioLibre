@@ -8,6 +8,13 @@ public class MainInventario {
         int opcion = -1;
 
         List<Objeto> objetos = LeerArchivo.leer("objetos.txt");
+
+        if (objetos.isEmpty()) {
+            System.out.println("Archivo no encontrado");
+            objetos.add(new Herramienta("Pico", 1, 100.0, "hierro"));
+            objetos.add(new Consumible("Manzana", 5, "salud"));
+        }
+
         inventario.setObjetos(objetos);
 
         for (Objeto objeto : inventario.getObjetos()) {
