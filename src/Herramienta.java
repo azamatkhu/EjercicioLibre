@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.math.*;
 
 public class Herramienta extends Objeto{
     private double porcentajeDeUso = 100.0;
@@ -24,6 +25,8 @@ public class Herramienta extends Objeto{
         Random r = new Random();
 
         porcentajeDeUso -= r.nextDouble(30);
+
+        porcentajeDeUso = Math.round(porcentajeDeUso);
 
         if (porcentajeDeUso <= 0) {
             System.out.println(getNombre() + " se ha roto!");

@@ -7,16 +7,14 @@ public class MainInventario {
         Scanner sc = new Scanner(System.in);
         int opcion = -1;
 
-        System.out.println("Bienvenidos a Inventario");
-
         List<Objeto> objetos = LeerArchivo.leer("objetos.txt");
         inventario.setObjetos(objetos);
-
-        System.out.println(inventario.getObjetos().size());
 
         for (Objeto objeto : inventario.getObjetos()) {
             inventario.setEspacioOcupado(inventario.getEspacioOcupado() + 1);
         }
+
+        System.out.println("Bienvenidos a Inventario");
 
         while(opcion != 0){
             System.out.println("-------- MENU ------------");
