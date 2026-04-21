@@ -22,17 +22,20 @@ public class Inventario {
     }
 
     public void comprobarObjetosUtilizados() {
-        for (int i = 0; i == objetos.size(); i++) {
+        for (int i = 0; i < objetos.size(); i++) {
             Objeto objeto = objetos.get(i);
 
             if (objeto.getCantidad() <= 0 || (objeto instanceof Herramienta && ((Herramienta) objeto).getPorcentajeDeUso() <= 0)) {
                 eliminarObjeto(i);
+                i--;
             }
         }
     }
+
     public void eliminarObjeto(int posicion) {
         if (posicion >= 0 && posicion < objetos.size()) {
             System.out.println("Objeto eliminado: " + objetos.get(posicion).getNombre());
+
             objetos.remove(posicion);
             espacioOcupado--;
         }
